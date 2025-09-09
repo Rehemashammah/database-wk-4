@@ -1,0 +1,14 @@
+--Question 1
+
+SELECT paymentDate,  SUM (amount) AS total_amount
+FROM payments
+GROUP BY paymentDate
+
+ORDER BY paymentDate DESC
+
+LIMIT 5;
+
+
+--Question 2
+
+
