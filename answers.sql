@@ -11,4 +11,20 @@ LIMIT 5;
 
 --Question 2
 
+SELECT customerName, country, AVG(creditLimit) AS avg_credit_limit
+FROM customers
+GROUP BY customerName, country;
+
+--Question 3
+
+SELECT productCode, quantityOrdered, SUM(quantityOrdered * priceEach) AS Total_price
+FROM orderdetails
+GROUP BY productCode, quantityOrdered;
+
+--Question 4
+
+SELECT checkNumber, MAX(amount) AS highest_amount_paid
+FROM payments
+GROUP BY checkNumber;
+
 
